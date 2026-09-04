@@ -5,5 +5,5 @@
 }
 
 body {
-
+  background: oklch(10% var(--main-chroma) var(--main-hue))
 }
