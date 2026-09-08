@@ -7,4 +7,5 @@
 body {
   background: oklch(10% var(--main-chroma) var(--main-hue));
   color: oklch(100% 0.01 var(--main-hue));
+  font-family: sans-serif;
 }
