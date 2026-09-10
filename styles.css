@@ -1,11 +1,34 @@
 :root {
   --main-lightness: 87.5%;
-  --main-chroma: 0.171;
+  --main-chroma: 0.05;
   --main-hue: 176.6deg;
+
+  --button-lightness: 70%;
+  --button-chroma: 0.1;
+  --button-hue: var(--main-hue);
+
+  --button-base: oklch(var(--button-lightness) var(--button-chroma) var(--button-hue));
 }
 
 body {
-  background: oklch(10% var(--main-chroma) var(--main-hue));
+  background: oklch(20% var(--main-chroma) var(--main-hue));
   color: oklch(100% 0.01 var(--main-hue));
   font-family: sans-serif;
+}
+
+#star {
+    background: url("definitelyevil.png"), linear-gradient(90deg, #000, #f00);
+}
+
+.cbutton {
+    appearance: none;
+    border: none;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+    
+    --button-glint: oklch(from var(--button-base) calc(l + 0.15) c h);
+    background-image: linear-gradient(0deg, var(--button-base), var(--button-glint));
+    border-radius: 0.5em;
+    height: 2rem
 }
